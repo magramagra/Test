@@ -1,5 +1,6 @@
 package tests.examples;
 
+import org.testng.annotations.Test;
 import tests.BaseTest;
 
 /**
@@ -7,4 +8,8 @@ import tests.BaseTest;
  */
 public class TestParameters extends BaseTest {
 
+    @Test
+    public void test1() {
+        System.out.println("test");
+    }
 }
