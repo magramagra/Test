@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+GradleSelenium.iml
+build/
+gradle/
+gradlew
+gradlew.bat
