@@ -22,4 +22,8 @@ test {
         listeners << 'org.uncommons.reportng.HTMLReporter'
         listeners << 'org.testng.reporters.XMLReporter'
     }
+
+    useTestNG {
+        suites 'src/test/resources/suits/testng.xml'
+    }
 }
