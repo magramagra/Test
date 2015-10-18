@@ -34,3 +34,7 @@ test {
 
     //http://stackoverflow.com/questions/18487406/how-do-i-tell-gradle-to-use-specific-jdk-version
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
