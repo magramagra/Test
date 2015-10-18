@@ -20,6 +20,9 @@ public class MyLogger {
         Logger logger = Logger.getRootLogger();
         logger.setLevel(Level.ALL);
 
+//        String fileName = "results/logs/Logging.txt";
+//        String path[] = fileName.split("/");
+
         fileTxt = new FileHandler("results/logs/Logging.txt");
 
         //Define log pattern layout
