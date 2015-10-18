@@ -4,5 +4,4 @@ GradleSelenium.iml
 build/
 gradle/
 gradlew
-gradlew.bat
 results/
