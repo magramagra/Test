@@ -11,5 +11,12 @@ public class TestParameters extends BaseTest {
     @Test
     public void test1() {
         System.out.println("test");
+        LOGGER.info("TEST 1");
+    }
+
+    @Test
+    public void test2() {
+        System.out.println("test");
+        LOGGER.info("TEST 2");
     }
 }
