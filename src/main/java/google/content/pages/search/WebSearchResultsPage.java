@@ -6,8 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona wyników wyszukiwania stron www w tgoogle
- * <p>
+ * Strona wyników wyszukiwania stron www w Google
  * Created by Mag.
  */
 public class WebSearchResultsPage extends SearchResultsPage {
@@ -20,7 +19,7 @@ public class WebSearchResultsPage extends SearchResultsPage {
         super(driver);
     }
 
-    //------------------------------------------------
+    //----------------------------------
 
     public boolean isTableResultsPresent() {
         return isPresent(RESULTS_LIST);
@@ -33,5 +32,4 @@ public class WebSearchResultsPage extends SearchResultsPage {
         return new WebSearchResultsList(this,RESULTS_LIST);
     }
 
-    //--------------------
 }
