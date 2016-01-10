@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona google
+ * Strona tgoogle
  *
  * Created by Mag.
  */

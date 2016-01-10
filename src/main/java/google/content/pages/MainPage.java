@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Strona g³. google
+ * Strona g³. tgoogle
  * Created by Mag.
  */
 public class MainPage extends GooglePage {
@@ -36,7 +36,7 @@ public class MainPage extends GooglePage {
     //--------------------------
 
     public static MainPage open(WebDriver webDriver) {
-        webDriver.get("https://www.google.pl/");
+        webDriver.get("https://www.tgoogle.pl/");
         return loadPage(webDriver, MainPage.class);
     }
 

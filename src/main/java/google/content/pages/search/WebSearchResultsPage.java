@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona wyników wyszukiwania stron www w google
+ * Strona wyników wyszukiwania stron www w tgoogle
  * <p>
  * Created by Mag.
  */

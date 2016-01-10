@@ -6,7 +6,7 @@
     <test name="google">
 
         <packages>
-            <package name="tests.google.*"/>
+            <package name="tests.tgoogle.*"/>
         </packages>
 
     </test>
