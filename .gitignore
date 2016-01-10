@@ -1,5 +1,8 @@
 .gradle/
 .idea/
 GradleSelenium.iml
+GoogleTests.imi
 build/
 results/
+logs/
+screenshots/

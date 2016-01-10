@@ -1,16 +1,27 @@
 package listeners;
 
-import myapi.logger.MyLogger;
+import com.beust.jcommander.converters.PathConverter;
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
+import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 /**
- * Created by Magdalena on 18.10.2015.
+ * Created by Mag
  */
 public class TestListener implements ITestListener {
+
+    private final static Logger logger = Logger.getLogger(TestListener.class);
+
     @Override
     public void onTestStart(ITestResult result) {
 
@@ -38,14 +49,9 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        try {
-            MyLogger.setup();
-        } catch (IOException e) {
-        }
     }
 
     @Override
     public void onFinish(ITestContext context) {
-
     }
 }

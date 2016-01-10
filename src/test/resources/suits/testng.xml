@@ -3,10 +3,12 @@
 
 <suite name="Suite1">
 
-    <test name="exampletest1">
-        <classes>
-            <class name="tests.examples.TestParameters"/>
-        </classes>
+    <test name="google">
+
+        <packages>
+            <package name="tests.vgoogle.*"/>
+        </packages>
+
     </test>
 
 </suite>
