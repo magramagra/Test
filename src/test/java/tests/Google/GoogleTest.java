@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * Nadklasa dla testów goole
+ * Nadklasa dla testów google
  * Created by Mag.
  */
 public abstract class GoogleTest {
@@ -46,6 +46,12 @@ public abstract class GoogleTest {
         driver.quit();
     }
 
+    /**
+     * Operacje wykonywane po metodzie testowej
+     * - Wykonanie zdjêcia, gdy test nie przeszed³
+     *
+     * @param result
+     */
     @AfterMethod
     public void afterMethod(ITestResult result) {
         Reporter.setCurrentTestResult(result);
@@ -61,7 +67,6 @@ public abstract class GoogleTest {
                 FileUtils.copyFile(scrFile, file);
                 System.setProperty("org.uncommons.reportng.escape-output", "false");
                 Reporter.setEscapeHtml(false);
-                //Reporter.log("<a href='" + file.getAbsolutePath() + "'> <img src='" + file.getAbsolutePath() + "' height='100' width='100'/> </a>");
                 Reporter.log("<a " +
                         "href='" + file.getAbsolutePath() + "'> " +
                         "<img src=\"./../../../../../" + path + "/" + file.getName() + "\" height=\"50%\" width=\"50%\"/>" +

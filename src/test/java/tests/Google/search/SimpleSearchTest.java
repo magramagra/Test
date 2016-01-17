@@ -44,7 +44,7 @@ public class SimpleSearchTest extends GoogleTest {
         //otwarcie pierwszej z znalezionych stron
         WebResultRow row = resultsPage.getResultsList().getFirstRow();
         ExternalPage externalPage = row.open();
-        //spr. czy to otwarto zamierzon¹ stronê
+        //spr. czy to otwarto zamierzon¹ stronê (po jej tytule)
         assertThat("Tytu³ strony", externalPage.getTitle(), equalTo(expectedPageTitle));
     }
 

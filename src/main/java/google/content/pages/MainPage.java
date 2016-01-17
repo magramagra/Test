@@ -49,9 +49,12 @@ public class MainPage extends GooglePage {
      */
     public WebSearchResultsPage search(String text) {
         logger.info("Wyszukiwanie '"+text+"'");
+        //wpisanie szukanego tekstu do wyszukiwarki
         searchInput.clear();
         searchInput.sendKeys(text + Keys.ENTER);
+        //odczekanie 5s na za³adowanie strony wyników
         sleep(5);
+        //zwraca stronê wyników wyszukiwania
         return loadPage(WebSearchResultsPage.class);
     }
 }
