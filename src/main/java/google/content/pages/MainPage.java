@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Strona g³. tgoogle
+ * Strona g³. Google
  * Created by Mag.
  */
 public class MainPage extends GooglePage {
@@ -23,8 +23,6 @@ public class MainPage extends GooglePage {
         super(driver);
     }
 
-    //--------------------------
-
     public boolean isCurrentPage() {
         return isCurrentPage(driver);
     }
@@ -33,21 +31,15 @@ public class MainPage extends GooglePage {
         return !webDriver.findElements(By.cssSelector("#hplogo")).isEmpty();
     }
 
-    //--------------------------
-
     public static MainPage open(WebDriver webDriver) {
-        webDriver.get("https://www.tgoogle.pl/");
+        webDriver.get("https://www.google.pl/");
         return loadPage(webDriver, MainPage.class);
     }
 
     public WebSearchResultsPage search(String text) {
         searchInput.clear();
-        searchInput.sendKeys(text+ Keys.ENTER);
+        searchInput.sendKeys(text + Keys.ENTER);
         sleep(5);
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
-//        wait.until(ExpectedConditions.textToBePresentInElementLocated(
-//                By.cssSelector("div#search"),
-//                text));
         return loadPage(WebSearchResultsPage.class);
     }
 }

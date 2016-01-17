@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -20,6 +19,12 @@ public abstract class Page extends Content {
 
     public Page(WebDriver driver) {
         super(driver);
+    }
+
+    //----------------------------------------
+
+    protected <T extends Page> T loadPage(Class<? extends Page> klassPage) {
+        return super.loadPage(klassPage);
     }
 
     //------------------
@@ -41,6 +46,10 @@ public abstract class Page extends Content {
         return driver.findElements(by);
     }
 
-    //----------------------------------------
+    //------------------
+
+    public String getTitle() {
+        return driver.getTitle();
+    }
 
 }

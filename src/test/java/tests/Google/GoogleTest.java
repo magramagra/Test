@@ -1,4 +1,4 @@
-package tests.tgoogle;
+package tests.google;
 
 import google.content.pages.MainPage;
 import org.apache.commons.io.FileUtils;

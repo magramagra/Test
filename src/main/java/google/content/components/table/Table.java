@@ -87,8 +87,10 @@ public class Table extends Component {
         return list;
     }
 
-
     //----------------------------------
 
+    public <T extends Row> T getFirstRow() {
+        return (T) getRows().get(0);
+    }
 
 }

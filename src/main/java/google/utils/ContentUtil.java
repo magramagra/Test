@@ -14,7 +14,7 @@ public class ContentUtil {
 
     private final static Logger logger = Logger.getLogger(ContentUtil.class);
 
-    public static <T extends GooglePage> T loadPage(WebDriver webDriver, Class<? extends Page> klassPage){
+    public static <T extends Page> T loadPage(WebDriver webDriver, Class<? extends Page> klassPage){
         try{
             return (T) PageFactory.initElements(webDriver, klassPage);
         }catch (Exception e){

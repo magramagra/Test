@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona tgoogle
+ * Strona google
  *
  * Created by Mag.
  */
@@ -15,4 +15,5 @@ public abstract class GooglePage extends Page {
     public GooglePage(WebDriver driver) {
         super(driver);
     }
+
 }
