@@ -31,12 +31,24 @@ public class MainPage extends GooglePage {
         return !webDriver.findElements(By.cssSelector("#hplogo")).isEmpty();
     }
 
+    /**
+     * Otwarcie g³. strony google
+     *
+     * @param webDriver
+     * @return
+     */
     public static MainPage open(WebDriver webDriver) {
         webDriver.get("https://www.google.pl/");
         return loadPage(webDriver, MainPage.class);
     }
 
+    /**
+     * Wyszukanie w google
+     * @param text - tekst do wyszukania
+     * @return - zwraca stronê wyników wyszukiwania
+     */
     public WebSearchResultsPage search(String text) {
+        logger.info("Wyszukiwanie '"+text+"'");
         searchInput.clear();
         searchInput.sendKeys(text + Keys.ENTER);
         sleep(5);
