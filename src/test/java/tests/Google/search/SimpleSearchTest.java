@@ -29,9 +29,10 @@ public class SimpleSearchTest extends GoogleTest {
     }
 
     /**
-     * Prosty test wyszukiwania w google
+     * Test prostego wyszukiwania w Google
      *
-     * @param searchText
+     * @param searchText        - tekst do wyszukania
+     * @param expectedPageTitle - oczekiwany Tytu³ znalezionej strony
      */
     @Test(dataProvider = "searchText")
     public void testSearchWeb(String searchText, String expectedPageTitle) {
