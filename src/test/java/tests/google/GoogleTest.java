@@ -64,7 +64,8 @@ public abstract class GoogleTest {
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                String path = "build/reports/tests/screenshots";
+                String folderName = "screenshots";
+                String path = "build/reports/tests/" + folderName;
 
                 File folder = new File(path);
                 if (!folder.exists()) {
@@ -77,9 +78,11 @@ public abstract class GoogleTest {
 
                 System.setProperty("org.uncommons.reportng.escape-output", "false");
                 Reporter.setEscapeHtml(false);
+                String href = "./../" + folderName + "/" + file.getName();
+                logger.info("<a href='" + href + "'>Image error</a>");
                 Reporter.log("<a " +
-                        "href='" + file.getAbsolutePath() + "'> " +
-                        "<img src=\"./../../../../" + path + "/" + file.getName() + "\" height=\"50%\" width=\"50%\"/>" +
+                        "href='" + href + "'> " +
+                        "<img src=\"" + href + "\" height=\"50%\" width=\"50%\"/>" +
                         " </a>");
                 Reporter.setEscapeHtml(false);
             } catch (IOException e1) {
