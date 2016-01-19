@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona wyników wyszukiwania w google
+ * Strona wynikÃ³w wyszukiwania w google
  * <p>
  * Created by Mag.
  */

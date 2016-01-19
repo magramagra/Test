@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona zewnêtrzna (nie podstrona google)
+ * Strona zewnÄ™trzna (nie podstrona google)
  * Created by Mag.
  */
 public class ExternalPage extends Page {

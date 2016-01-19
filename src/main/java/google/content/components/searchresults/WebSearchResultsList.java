@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 /**
- * Komponent : tabela wyników wyszukiwania stron www
+ * Komponent : tabela wynikÃ³w wyszukiwania stron www
  * Created by Mag.
  */
 public class WebSearchResultsList extends Table {
@@ -17,7 +17,7 @@ public class WebSearchResultsList extends Table {
     private final static Logger logger = Logger.getLogger(WebSearchResultsList.class);
 
     /**
-     * Wiersz wyników wyszukiwania
+     * Wiersz wynikÃ³w wyszukiwania
      */
     public static class WebResultRow extends Row {
 

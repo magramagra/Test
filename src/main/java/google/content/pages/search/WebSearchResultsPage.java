@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Strona wynik�w wyszukiwania stron www w Google
+ * Strona wyników wyszukiwania stron www w Google
  * Created by Mag.
  */
 public class WebSearchResultsPage extends SearchResultsPage {
@@ -27,7 +27,7 @@ public class WebSearchResultsPage extends SearchResultsPage {
 
     public WebSearchResultsList getResultsList() {
         if(!isTableResultsPresent()) {
-            throw new RuntimeException("Brak elementu z list� wynik�w");
+            throw new RuntimeException("Brak elementu z listą wyników");
         }
         return new WebSearchResultsList(this,RESULTS_LIST);
     }

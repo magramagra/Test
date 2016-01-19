@@ -14,12 +14,12 @@ public class AssertTest {
     @Test
     public void test1() {
         int total = -1;
-        assertTrue(total > 0, "Wartoœæ");
+        assertTrue(total > 0, "WartoÅ›Ä‡");
     }
 
     @Test
     public void test2() {
         int total = -1;
-        assertThat("Wartoœæ", total, greaterThan(0));
+        assertThat("WartoÅ›Ä‡", total, greaterThan(0));
     }
 }

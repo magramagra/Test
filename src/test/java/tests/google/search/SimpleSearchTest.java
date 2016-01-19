@@ -32,7 +32,7 @@ public class SimpleSearchTest extends GoogleTest {
      * Test prostego wyszukiwania w Google
      *
      * @param searchText        - tekst do wyszukania
-     * @param expectedPageTitle - oczekiwany Tytu? znalezionej strony
+     * @param expectedPageTitle - oczekiwany Tytuł znalezionej strony
      */
     @Test(dataProvider = "searchText")
     public void testSearchWeb(String searchText, String expectedPageTitle) {
@@ -40,13 +40,13 @@ public class SimpleSearchTest extends GoogleTest {
         MainPage mainPage = goToGoogle();
         //wyszukanie zadanego tesktu w wyszukiwarce google
         WebSearchResultsPage resultsPage = mainPage.search(searchText);
-        //spr. czy s? jakie? wyniki wyszukiwania
-        assertThat("Brak tabeli wynik�w wyszukiwania", resultsPage.isTableResultsPresent(), equalTo(true));
+        //spr. czy są jakieś wyniki wyszukiwania
+        assertThat("Brak tabeli wyników wyszukiwania", resultsPage.isTableResultsPresent(), equalTo(true));
         //otwarcie pierwszej z znalezionych stron
         WebResultRow row = resultsPage.getResultsList().getFirstRow();
         ExternalPage externalPage = row.open();
-        //spr. czy to otwarto zamierzon? stron? (po jej tytule)
-        assertThat("Tytu? strony", externalPage.getTitle(), equalTo(expectedPageTitle));
+        //spr. czy to otwarto zamierzoną stronę (po jej tytule)
+        assertThat("Tytuł strony", externalPage.getTitle(), equalTo(expectedPageTitle));
     }
 
     /**
@@ -55,6 +55,6 @@ public class SimpleSearchTest extends GoogleTest {
     @Test
     public void testFail() {
         MainPage mainPage = goToGoogle();
-        fail("OK, test mia? nie przej??");
+        fail("OK, test miał nie przejść");
     }
 }

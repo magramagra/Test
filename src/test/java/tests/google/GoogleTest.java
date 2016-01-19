@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * Nadklasa dla test�w google
+ * Nadklasa dla testów google
  * Created by Mag.
  */
 public abstract class GoogleTest {
@@ -29,8 +29,8 @@ public abstract class GoogleTest {
     private WebDriver driver;
 
     /**
-     * Operacje wykonywane przed uruchomieniem test�w z danej klasy
-     * - Otwarcie przegl�darki
+     * Operacje wykonywane przed uruchomieniem testów z danej klasy
+     * - Otwarcie przeglądarki
      */
     @BeforeClass
     public void beforeClass() {
@@ -40,8 +40,8 @@ public abstract class GoogleTest {
     }
 
     /**
-     * Operacje wykonywane po zako�czeniu test�w z danej klasy
-     * - Zamkni�cie przegl�darki
+     * Operacje wykonywane po zakończeniu testów z danej klasy
+     * - Zamknięcie przeglądarki
      */
     @AfterClass
     public void afterClass() {
@@ -50,7 +50,7 @@ public abstract class GoogleTest {
 
     /**
      * Operacje wykonywane po metodzie testowej
-     * - Wykonanie zdj�cia, gdy test nie przeszed�
+     * - Wykonanie zdjęcia, gdy test nie przeszedł
      *
      * @param result
      */
@@ -91,7 +91,7 @@ public abstract class GoogleTest {
     }
 
     /**
-     * Przej�cie do g�. stony Google
+     * Przejście do gł. stony Google
      *
      * @return
      */

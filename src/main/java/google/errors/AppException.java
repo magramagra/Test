@@ -3,7 +3,7 @@ package google.errors;
 import org.apache.log4j.Logger;
 
 /**
- * B³¹d aplikacji
+ * BÅ‚Ä…d aplikacji
  * Created by Mag.
  */
 public class AppException extends RuntimeException {

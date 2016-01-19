@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Strona g³. Google
+ * Strona gÅ‚. Google
  * Created by Mag.
  */
 public class MainPage extends GooglePage {
@@ -32,7 +32,7 @@ public class MainPage extends GooglePage {
     }
 
     /**
-     * Otwarcie g³. strony google
+     * Otwarcie gÅ‚. strony google
      *
      * @param webDriver
      * @return
@@ -45,16 +45,16 @@ public class MainPage extends GooglePage {
     /**
      * Wyszukanie w google
      * @param text - tekst do wyszukania
-     * @return - zwraca stronê wyników wyszukiwania
+     * @return - zwraca stronï¿½ wynikï¿½w wyszukiwania
      */
     public WebSearchResultsPage search(String text) {
         logger.info("Wyszukiwanie '"+text+"'");
         //wpisanie szukanego tekstu do wyszukiwarki
         searchInput.clear();
         searchInput.sendKeys(text + Keys.ENTER);
-        //odczekanie 5s na za³adowanie strony wyników
+        //odczekanie 5s na zaÅ‚adowanie strony wynikÃ³w
         sleep(5);
-        //zwraca stronê wyników wyszukiwania
+        //zwraca stronÄ™ wynikÃ³w wyszukiwania
         return loadPage(WebSearchResultsPage.class);
     }
 }

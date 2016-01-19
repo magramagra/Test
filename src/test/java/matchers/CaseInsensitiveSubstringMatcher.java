@@ -7,7 +7,7 @@ import org.hamcrest.TypeSafeMatcher;
 
 /**
  * Matcher do spr. czy w string zawiera substring
- * bez brania pod uwagê wielkoœci liter
+ * bez brania pod uwagi wielkoÅ›ci liter
  * Created by Mag.
  */
 public class CaseInsensitiveSubstringMatcher extends TypeSafeMatcher<String> {

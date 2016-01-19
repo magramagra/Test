@@ -12,18 +12,18 @@ import java.util.concurrent.TimeUnit;
 public class SimpleSelenium {
 
     public static void main(String [ ] args) {
-        //otwórz przegladarkê
+        //otwÃ³rz przegladarkÄ™
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //otwórz stronê Google
+        //otwÃ³rz stronÄ™ Google
         driver.get("https://www.google.pl/");
         //wyszukaj "selenium"
         driver.findElement(By.id("lst-ib")).clear();
         driver.findElement(By.id("lst-ib")).sendKeys("selenium");
-        //otwórz stronê z wyników
+        //otwÃ³rz stronÄ™ z wynikÃ³w
         driver.findElement(By.linkText("Selenium - Web Browser Automation")).click();
         sleep(3);
-        //zamknij przegl¹darkê
+        //zamknij przeglÄ…darkÄ™
         driver.quit();
     }
 
