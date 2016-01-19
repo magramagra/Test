@@ -50,11 +50,16 @@ public class SimpleSearchTest extends GoogleTest {
     }
 
     /**
-     * Test, kt?ry nie przechodzi zawsze
+     * Test, który zawsze nie przechodzi
      */
     @Test
     public void testFail() {
         MainPage mainPage = goToGoogle();
         fail("OK, test miał nie przejść");
+    }
+
+    @Test
+    public void testOpenMainPage() {
+        MainPage mainPage = goToGoogle();
     }
 }
