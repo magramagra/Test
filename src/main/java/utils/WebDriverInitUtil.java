@@ -21,7 +21,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 public class WebDriverInitUtil {
 
     private final static Logger logger = Logger.getLogger(WebDriverInitUtil.class);
-    private static String DISPLAY = ":0"; // ekran
+    private static String DISPLAY = ":99"; // ekran
     public static final int BROWSER_TIMEOUT = (int) SECONDS.toMillis(60 * 5);
     public static final int TIMEOUT = (int) SECONDS.toMillis(60 * 3);
     public static final String FIREFOX_URL = "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases";
