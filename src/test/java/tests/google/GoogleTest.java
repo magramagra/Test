@@ -12,6 +12,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import utils.WebDriverInitUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * Nadklasa dla testów google
+ * Nadklasa dla testï¿½w google
  * Created by Mag.
  */
 public abstract class GoogleTest {
@@ -28,18 +29,19 @@ public abstract class GoogleTest {
     private WebDriver driver;
 
     /**
-     * Operacje wykonywane przed uruchomieniem testów z danej klasy
-     * - Otwarcie przegl¹darki
+     * Operacje wykonywane przed uruchomieniem testï¿½w z danej klasy
+     * - Otwarcie przeglï¿½darki
      */
     @BeforeClass
     public void beforeClass() {
-        driver = new FirefoxDriver();
+        //driver = new FirefoxDriver();
+        driver = WebDriverInitUtil.initDriverType(FirefoxDriver.class);
         driver.manage().window().maximize();
     }
 
     /**
-     * Operacje wykonywane po zakoñczeniu testów z danej klasy
-     * - Zamkniêcie przegl¹darki
+     * Operacje wykonywane po zakoï¿½czeniu testï¿½w z danej klasy
+     * - Zamkniï¿½cie przeglï¿½darki
      */
     @AfterClass
     public void afterClass() {
@@ -48,7 +50,7 @@ public abstract class GoogleTest {
 
     /**
      * Operacje wykonywane po metodzie testowej
-     * - Wykonanie zdjêcia, gdy test nie przeszed³
+     * - Wykonanie zdjï¿½cia, gdy test nie przeszedï¿½
      *
      * @param result
      */
@@ -81,7 +83,7 @@ public abstract class GoogleTest {
     }
 
     /**
-     * Przejœcie do g³. stony Google
+     * Przejï¿½cie do gï¿½. stony Google
      *
      * @return
      */

@@ -41,7 +41,7 @@ public class SimpleSearchTest extends GoogleTest {
         //wyszukanie zadanego tesktu w wyszukiwarce google
         WebSearchResultsPage resultsPage = mainPage.search(searchText);
         //spr. czy s? jakie? wyniki wyszukiwania
-        assertThat("Brak tabeli wynik?w wyszukiwania", resultsPage.isTableResultsPresent(), equalTo(true));
+        assertThat("Brak tabeli wyników wyszukiwania", resultsPage.isTableResultsPresent(), equalTo(true));
         //otwarcie pierwszej z znalezionych stron
         WebResultRow row = resultsPage.getResultsList().getFirstRow();
         ExternalPage externalPage = row.open();
