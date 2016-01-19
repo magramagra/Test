@@ -1,6 +1,5 @@
 package google.utils;
 
-import google.content.pages.GooglePage;
 import google.content.pages.Page;
 import google.errors.AppException;
 import org.apache.log4j.Logger;
