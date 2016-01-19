@@ -4,8 +4,8 @@ import google.content.components.searchresults.WebSearchResultsList.WebResultRow
 import google.content.pages.MainPage;
 import google.content.pages.external.ExternalPage;
 import google.content.pages.search.WebSearchResultsPage;
-import google.errors.AppException;
 import org.apache.log4j.Logger;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tests.google.GoogleTest;
@@ -66,6 +66,6 @@ public class SimpleSearchTest extends GoogleTest {
 
     @Test
     public void skipTest() {
-        throw new AppException("Test został pominięty celowo");
+        throw new SkipException("Test został pominięty celowo");
     }
 }
