@@ -1,6 +1,6 @@
 package tests.google.search;
 
-import google.content.components.results.WebSearchResultsList.WebResultRow;
+import google.content.components.searchresults.WebSearchResultsList.WebResultRow;
 import google.content.pages.MainPage;
 import google.content.pages.external.ExternalPage;
 import google.content.pages.search.WebSearchResultsPage;
