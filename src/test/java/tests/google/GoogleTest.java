@@ -64,14 +64,22 @@ public abstract class GoogleTest {
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             try {
-                String path = "screenshots";
-                File file = new File(path + "/" + methodName + "_" + formater.format(calendar.getTime()) + ".png");
+                String path = "build/reports/tests/screenshots";
+
+                File folder = new File(path);
+                if (!folder.exists()) {
+                    folder.mkdir();
+                    logger.debug("folder created = " + folder);
+                }
+                String ssName = methodName + "_" + formater.format(calendar.getTime()) + ".png";
+                File file = new File(folder, ssName);
                 FileUtils.copyFile(scrFile, file);
+
                 System.setProperty("org.uncommons.reportng.escape-output", "false");
                 Reporter.setEscapeHtml(false);
                 Reporter.log("<a " +
                         "href='" + file.getAbsolutePath() + "'> " +
-                        "<img src=\"./../../../../../" + path + "/" + file.getName() + "\" height=\"50%\" width=\"50%\"/>" +
+                        "<img src=\"./../../../../" + path + "/" + file.getName() + "\" height=\"50%\" width=\"50%\"/>" +
                         " </a>");
                 Reporter.setEscapeHtml(false);
             } catch (IOException e1) {
