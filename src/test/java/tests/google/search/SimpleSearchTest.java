@@ -66,6 +66,7 @@ public class SimpleSearchTest extends GoogleTest {
 
     @Test
     public void skipTest() {
+        MainPage mainPage = goToGoogle();
         throw new SkipException("Test został pominięty celowo");
     }
 }
