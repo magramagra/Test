@@ -3,6 +3,9 @@
 GradleSelenium.iml
 GoogleTests.imi
 build/
+/GoogleTests.ipr
+/GoogleTests.iml
+/GoogleTests.iws
 results/
 logs/
 screenshots/

@@ -1,0 +1,32 @@
+apply plugin: 'maven'
+
+
+configurations {
+    provided
+}
+
+sourceSets {
+    main.compileClasspath += [configurations.provided]
+    test.compileClasspath += [configurations.provided]
+    test.runtimeClasspath += [configurations.provided]
+}
+
+task mappings {
+    conf2ScopeMappings.addMapping( 0, configurations.provided, Conf2ScopeMappingContainer.PROVIDED )
+}
+
+idea {
+    module {
+        scopes.PROVIDED.plus += [configurations.provided]
+    }
+}
+
+javadoc {
+    classpath += configurations.provided
+}
+
+eclipse {
+    classpath{
+        plusConfigurations += [configurations.provided]
+    }
+}

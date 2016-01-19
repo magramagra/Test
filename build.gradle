@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'idea' // adds 'idea' task
+apply plugin: 'eclipse' // adds 'eclipse' task
+apply from: 'provided.gradle'
 
 sourceCompatibility = 1.8
 version = '1.0'
